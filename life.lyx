@@ -25,7 +25,7 @@
 \setlrmarginsandblock{1in}{1.25in}{*} % Left/right margins
 \setulmarginsandblock{1.5in}{1in}{*} % Top/bottom margins
 \setheadfoot{0.25in}{0.5in} % Header/footer height
-\setheaderspaces{*}{0.1in}{*} % Extra header space
+\setheaderspaces{10pt}{*}{*} % Extra header space
 
 %----------------------------------------------------------------------------------------
 %	FOOTNOTE CUSTOMIZATION
@@ -44,7 +44,7 @@
 \makepagestyle{mio} % Define a new custom page style
 \setlength{\headwidth}{\textwidth} % Header the same width as the text
 \makeheadrule{mio}{\textwidth}{0.1mm} % Header rule height
-\makeoddhead{mio}{\scriptsize{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}}{}{} % Header specification
+\makeoddhead{mio}{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
 \makeoddfoot{mio}{}{\scriptsize {\thepage \quad \vrule \quad \thelastpage}}{} % Footer specification
 \makeoddfoot{plain}{}{\footnotesize {\thepage \quad \vrule \quad \thelastpage}}{} % Pages of chapters
 \pagestyle{mio} % Set the page style to the custom style defined above
@@ -376,7 +376,7 @@ shapepar
 \begin_body
 
 \begin_layout Standard
-Something
+Title Page
 \begin_inset Newpage newpage
 \end_inset
 
@@ -407,7 +407,7 @@ status open
 
 
 \backslash
-multipagetikzbackground{2}{prophetstown_panorama_04_08_16.jpg}
+multipagetikzbackground{2}{img/prophetstown_panorama_04_08_16.jpg}
 \end_layout
 
 \end_inset
@@ -459,7 +459,7 @@ status open
 
 
 \backslash
-input{plot_04_08_16.pgf}
+input{img/plot_04_08_16.pgf}
 \end_layout
 
 \end_inset
@@ -479,9 +479,23 @@ April 8th, 2016
 \begin_layout Plain Layout
 This Friday, Justine convinced me to go car-camping at Prophetstown State
  Park with her.
- The promise of a good hike to cool down from the week was too much to resist,
- but we both knew how cold it was going to be.
- 
+ The promise of a good hike to relax after the week was too much to resist,
+ but we both knew that it would be cold.
+\end_layout
+
+\begin_layout Plain Layout
+The hike was wonderful, as expected.
+ Nobody was on the trails, and since the leaves are still not on the trees
+ yet, you can see for what seems like miles.
+ The prarie was especially beautiful in the sunset.
+\end_layout
+
+\begin_layout Plain Layout
+The cold proved to be too much for us; our plans to sleep with the back
+ hatch of the car open were discarded when it started snowing at 11pm.
+ We woke up early, even before first light, and decided it was time to head
+ home, so we could enjoy a breakfast of pancakes in the comfort of our own
+ home.
 \end_layout
 
 \end_inset

@@ -5,8 +5,7 @@ import datetime
 import sys
 import numpy as np
 import os
-sys.path.append(os.path.expanduser('~') + "code");
-from pymf import ctmfd as ahi
+sys.path.append(os.path.expanduser('~') + "/code/")
 from pym import func as ahf
 import matplotlib.dates as mdate
 
@@ -69,6 +68,6 @@ plot.xticks([np.min(x), 1.0 * (np.max(x) - np.min(x)) / 3.0 + np.min(x),
 plot.ylabel(r'Temperature ($T$) [$\mathrm{^{o}F}$]')
 plot.ylim(25., 45.)
 
-plot.export('plot_04_08_16', formats=['pdf', 'pgf'], sizes=['cs'],
+plot.export('../img/plot_04_08_16', formats=['pdf', 'pgf'], sizes=['cs'],
             customsize=(4, 2.5))
 plot.show()
