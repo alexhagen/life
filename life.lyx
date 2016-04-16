@@ -1,0 +1,522 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass memoir
+\begin_preamble
+\usepackage{lipsum}
+
+\usepackage{tikz} % Required for drawing custom shapes
+\usepackage{tikzpagenodes}
+\usepackage{pgf}
+\usetikzlibrary{calc}
+\definecolor[named]{color01}{rgb}{.2,.4,.6} % Color used in the title page
+\usepackage{afterpage}
+\usepackage{xcolor}
+
+\usepackage[unicode=true,bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=false]{hyperref} % PDF meta-information specification
+
+%----------------------------------------------------------------------------------------
+%	PAPER, MARGIN AND HEADER/FOOTER SIZES
+%----------------------------------------------------------------------------------------
+
+\setstocksize{10.875in}{8.375in} % Paper size
+\settrimmedsize{\stockheight}{\stockwidth}{*} % No trims
+\setlrmarginsandblock{1in}{1.25in}{*} % Left/right margins
+\setulmarginsandblock{1.5in}{1in}{*} % Top/bottom margins
+\setheadfoot{0.25in}{0.5in} % Header/footer height
+\setheaderspaces{*}{0.1in}{*} % Extra header space
+
+%----------------------------------------------------------------------------------------
+%	FOOTNOTE CUSTOMIZATION
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\foottextfont}{\itshape\footnotesize} % Font settings for footnotes
+\setlength{\footmarkwidth}{-.1em} % Space between the footnote number and the text
+\setlength{\footmarksep}{.1em} % Space between multiple footnotes on the same page
+\renewcommand*{\footnoterule}{} % Remove the rule above the first footnote
+\setlength{\skip\footins}{1\onelineskip} % Space between the body text and the footnote
+
+%----------------------------------------------------------------------------------------
+%	HEADER AND FOOTER FORMATS
+%----------------------------------------------------------------------------------------
+
+\makepagestyle{mio} % Define a new custom page style
+\setlength{\headwidth}{\textwidth} % Header the same width as the text
+\makeheadrule{mio}{\textwidth}{0.1mm} % Header rule height
+\makeoddhead{mio}{\scriptsize{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}}{}{} % Header specification
+\makeoddfoot{mio}{}{\scriptsize {\thepage \quad \vrule \quad \thelastpage}}{} % Footer specification
+\makeoddfoot{plain}{}{\footnotesize {\thepage \quad \vrule \quad \thelastpage}}{} % Pages of chapters
+\pagestyle{mio} % Set the page style to the custom style defined above
+
+%----------------------------------------------------------------------------------------
+%	PART FORMAT
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\partnamefont}{\centering\sffamily\itshape\Huge} % Part name font specification
+\renewcommand{\partnumfont}{\sffamily\Huge} % Part number font specification
+\renewcommand{\parttitlefont}{\centering\sffamily\scshape} % Part title font specification
+\renewcommand{\beforepartskip}{\null\vskip.618\textheight} % Whitespace above the part heading
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER FORMAT
+%----------------------------------------------------------------------------------------
+
+\makechapterstyle{Tufte}{ % Define a new chapter style
+\renewcommand{\chapterheadstart}{\null \vskip1\onelineskip} % Whitespace before the chapter starts
+\renewcommand{\printchaptername}{\large\sffamily\color{link}\chaptername} % "Chapter" text font specification
+\renewcommand{\printchapternum}{\large\sffamily\color{link}\thechapter\\} % Chapter number font specification
+\renewcommand{\afterchapternum}{} % Space between the chapter number and text
+\renewcommand{\printchaptertitle}[1]{ % Chapter title font specification
+\raggedright
+\color{blue}\sffamily\Huge{##1}}
+\renewcommand{\afterchaptertitle}{
+\vskip1pt
+\color{accent}\rule{0.6\textwidth}{0.5pt}
+\vskip5.5\onelineskip
+}}
+\chapterstyle{Tufte} % Set the chapter style to the custom style defined above
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMAT
+%----------------------------------------------------------------------------------------
+
+\setsecnumformat{}
+\def\sectionmark#1{\markboth{#1}{#1}}
+\setsecheadstyle{\raggedright\sffamily\LARGE} % Section title font specification
+\setbeforesecskip{1.5\onelineskip} % Whitespace before the section
+\setaftersecskip{1\onelineskip} % Whitespace after the section
+
+%----------------------------------------------------------------------------------------
+%	SUBSECTION FORMAT
+%----------------------------------------------------------------------------------------
+
+\setsubsecheadstyle{\raggedright\sffamily\color{link}\large} % Subsection title font specification
+\setbeforesubsecskip{1.0\onelineskip} % Whitespace before the subsection
+\setaftersubsecskip{0.5\onelineskip} % Whitespace after the subsection
+
+%----------------------------------------------------------------------------------------
+%	SUBSUBSECTION FORMAT
+%----------------------------------------------------------------------------------------
+
+\setsubsubsecheadstyle{\sethangfrom{\noindent ##1}\raggedright\sffamily\itshape} % Subsubsection title font specification
+\setbeforesubsubsecskip{-.5\onelineskip} % Whitespace before the subsubsection
+\setaftersubsubsecskip{.1\onelineskip} % Whitespace after the subsubsection
+
+%----------------------------------------------------------------------------------------
+%	CAPTION FORMAT
+%----------------------------------------------------------------------------------------
+
+\captiontitlefont{\itshape\footnotesize} % Caption font specification
+\captionnamefont{\footnotesize} % "Caption" text font specification
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION ENVIRONMENT FORMAT
+%----------------------------------------------------------------------------------------
+
+\renewenvironment{quotation}
+{\par\leftskip=1em\vskip.5\onelineskip\em}
+{\par\vskip.5\onelineskip}
+
+%----------------------------------------------------------------------------------------
+%	QUOTE ENVIRONMENT FORMAT
+%----------------------------------------------------------------------------------------
+
+\renewenvironment{quote}
+{\list{}{\em\leftmargin=1em}\item[]}{\endlist\relax}
+
+%----------------------------------------------------------------------------------------
+%	MISCELLANEOUS DOCUMENT SPECIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\setlength{\parindent}{1em} % Paragraph indentation
+
+\midsloppy % Fewer overfull lines - used in the memoir class and allows a setting somewhere between \fussy and \sloppy
+
+\checkandfixthelayout % Tell memoir to implement the above
+
+
+\title{Life} % Book title
+\author{Alex Hagen} % Author
+\newcommand{\edition}{2016} % Book edition
+
+\newcommand{\includetikz}[3]{%
+    \node [rectangle,align=center,above of=title,yshift=0.3 cm] (logo) {\resizebox{#2}{#3}{\input{#1}}};
+}
+
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\renewcommand{\epigraphflush}{center}
+\usepackage{tabto}
+\def\quoteattr#1#2{\setbox0=\hbox{#2}#1\tabto{\dimexpr\linewidth-\wd0}\box0}
+
+
+\usepackage{qrcode}
+\usepackage[nonumber]{cuisine}
+\RecipeWidths{\textwidth}{1.5cm}{0.25cm}{1.5cm}{.75cm}{.75cm}
+
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{afterpage}
+\usepackage{placeins}
+\usepackage{xcolor}
+
+\setcounter{totalnumber}{1}
+\setcounter{topnumber}{1}
+\setcounter{bottomnumber}{1}
+\renewcommand{\topfraction}{.99}
+\renewcommand{\bottomfraction}{.99}
+\renewcommand{\textfraction}{.01}
+
+\makeatletter
+\newcommand*{\twopagepicture}[5]{%
+    \checkoddpage
+    \ifoddpage
+        \expandafter\@firstofone
+    \else
+        \expandafter\afterpage
+    \fi
+    {\afterpage{%
+    \if #1t%
+        \if #2p%
+            \thispagestyle{empty}%
+            \afterpage{\thispagestyle{empty}}%
+        \fi
+    \fi
+    \begin{figure}[#1]
+        \if #2p%
+            \if #1t%
+                \vspace*{-\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}%
+            \fi
+        \fi
+        \if #1b%
+            \caption{#4}%
+        \fi
+        \makebox[\textwidth][l]{%
+        \if #2p\relax
+            \let\mywidth\paperwidth
+            \hskip-\dimexpr1in+\hoffset+\evensidemargin\relax
+        \else
+            \let\mywidth\linewidth
+        \fi
+        \adjustbox{trim=0 0 {.5\width} 0,clip}{
+\if #5n
+\includegraphics[width=2\mywidth]{#3}
+\fi
+\if #5g
+\resizebox{2\mywidth}{!}{\input{#3}}
+\fi
+}}%
+        \if #1b\else
+            \caption{#4}%
+        \fi
+        \if #2p%
+            \if #1b%
+                \vspace*{-\dimexpr\paperheight-\textheight-1in-\voffset-\topmargin-\headheight-\headsep\relax}%
+            \fi
+        \fi
+    \end{figure}%
+    \begin{figure}[#1]
+        \if #2p%
+            \if #1t%
+                \vspace*{-\dimexpr1in+\voffset+\topmargin+\headheight+\headsep\relax}%
+            \fi
+        \fi
+        \makebox[\textwidth][l]{%
+        \if #2p%
+            \let\mywidth\paperwidth
+            \hskip-\dimexpr1in+\hoffset+\oddsidemargin\relax
+        \else
+            \let\mywidth\linewidth
+        \fi
+        \adjustbox{trim={.5\width} 0 0 0,clip}{
+\if #5n
+\includegraphics[width=2\mywidth]{#3}
+\fi
+\if #5g
+\resizebox{2\mywidth}{!}{\input{#3}}
+\fi
+}}%
+        \if #2p%
+            \if #1b%
+                \vspace*{-\dimexpr\paperheight-\textheight-1in-\voffset-\topmargin-\headheight-\headsep\relax}%
+            \fi
+        \fi
+    \end{figure}%
+    }}%
+}
+\makeatother
+\usepackage{xcolor}
+\definecolor{newblack}{HTML}{142735}
+\definecolor{newwhite}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{accent}{HTML}{FC8D82}
+\definecolor{link}{HTML}{919789}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{newblack}}
+
+\usepackage[scale=1,angle=0,opacity=1.0,color=white]{background}
+\usetikzlibrary{calc}
+\usepackage{xifthen}
+\usepackage{lipsum}
+\usepackage{xstring}
+
+\newcommand{\multipagetikz}[3]% start page, num pages, picture code
+{   \pgfmathtruncatemacro{\currentpage}{\value{page}}
+    \pgfmathtruncatemacro{\maxpage}{#1+#2}
+    \pgfmathtruncatemacro{\minpage}{#1-1}
+    \pgfmathsetmacro{\nodename}{\value{page}}
+    \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.25\paperwidth}
+    \pgfmathsetmacro{\additionalyshift}{1.25in}
+    \ifthenelse{\currentpage < \maxpage \AND \currentpage > \minpage}
+    {
+        \IfSubStr{#3}{.jpg}{
+            \begin{tikzpicture}[overlay,remember picture,y=-0.80pt, x=0.80pt]
+              \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
+                 ($(current page.north)+(\additionalxshift, \additionalyshift)$)%
+                 {\includegraphics[height=\paperheight]{#3}};
+            \end{tikzpicture}
+        }{
+          \begin{tikzpicture}[overlay,remember picture,
+                      shift={(0,0)}]
+              #3
+          \end{tikzpicture}
+         }
+    }{}
+}
+
+\newcommand{\multipagetikzbackground}[2]% num pages, picture code
+{
+  \pgfmathtruncatemacro{\startpage}{\value{page}}
+  \backgroundsetup{ 
+    contents =  {
+      \multipagetikz{\startpage}{#1}{#2}
+    }
+  }
+}
+
+\backgroundsetup{
+  contents = {}
+}
+\end_preamble
+\options 9pt,twoside,openright
+\use_default_options false
+\begin_modules
+shapepar
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman Open Sans
+\font_sans Baron Neue
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Something
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+globalcolor{white}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+multipagetikzbackground{2}{prophetstown_panorama_04_08_16.jpg}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="bottom" width="4in">
+<column alignment="block" valignment="bottom" width="40text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{plot_04_08_16.pgf}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Section*
+April 8th, 2016
+\end_layout
+
+\begin_layout Plain Layout
+This Friday, Justine convinced me to go car-camping at Prophetstown State
+ Park with her.
+ The promise of a good hike to cool down from the week was too much to resist,
+ but we both knew how cold it was going to be.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+globalcolor{newblack}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

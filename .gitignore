@@ -1,3 +1,7 @@
+## LyX stuff
+*.lyx~
+*.lyx#
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
