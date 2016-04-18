@@ -1,0 +1,75 @@
+% bg - a library to make easy background spreads
+%
+% (c) Alex Hagen
+%
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bg}
+  [2016/04/18 v0.01 LaTeX package for magazine spreads]
+
+\RequirePackage[scale=1,angle=0,opacity=1.0,color=white]{background}
+\RequirePackage{tikz}
+\RequirePackage{xifthen}
+
+\usetikzlibrary{calc}
+\newlength{\fullheight}
+\setlength{\fullheight}{10.875in}
+\newlength{\fullwidth}
+\setlength{\fullwidth}{16.75in}
+
+\newcommand{\multipagetikz}[3]% start page, num pages, picture code
+{%
+    \pgfmathtruncatemacro{\currentpage}{\value{page}}%
+    \pgfmathtruncatemacro{\maxpage}{#1+#2}%
+    \pgfmathtruncatemacro{\minpage}{#1-1}%
+    \pgfmathsetmacro{\nodename}{\value{page}}%
+    \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.25\paperwidth}%
+    \pgfmathsetmacro{\additionalyshift}{1.25in}%
+    \ifthenelse{\currentpage < \maxpage \AND \currentpage > \minpage}%
+    {%
+          \begin{tikzpicture}[overlay,remember picture,y=-0.80pt, x=0.80pt]
+            #3
+          \end{tikzpicture}
+    }{}
+}
+
+\newcommand{\multipagebackgroundimage}[2]% num pages, picture code
+{
+  \pgfmathtruncatemacro{\startpage}{\value{page}}
+  \def\tikzcode{
+    \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
+       ($(current page.north)+(\additionalxshift, \additionalyshift)$) %
+       {\includegraphics[height=\paperheight]{#2}};
+  }
+  \backgroundsetup{
+    contents =  {
+      \multipagetikz{\startpage}{#1}{\tikzcode}
+    }
+  }
+}
+
+\newcommand{\multipagebackgroundtable}[2]% num pages, picture code
+{
+  \newsavebox{\tablebg}
+  \pgfmathtruncatemacro{\startpage}{\value{page}}
+  \sbox{\tablebg}{
+        #2
+  }
+  \def\tikzcode{
+    \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
+       ($(current page.north)+(\additionalxshift, \additionalyshift)$) %
+       {\usebox{\tablebg}};
+  }
+  \backgroundsetup{
+    contents =  {
+      \multipagetikz{\startpage}{#1}{\tikzcode}
+    }
+  }
+}
+
+\endinput
+%%
+%% End of file `bg.sty'.
