@@ -268,24 +268,26 @@
 \usepackage{xstring}
 
 \newcommand{\multipagetikz}[3]% start page, num pages, picture code
-{   \pgfmathtruncatemacro{\currentpage}{\value{page}}
-    \pgfmathtruncatemacro{\maxpage}{#1+#2}
-    \pgfmathtruncatemacro{\minpage}{#1-1}
-    \pgfmathsetmacro{\nodename}{\value{page}}
-    \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.25\paperwidth}
-    \pgfmathsetmacro{\additionalyshift}{1.25in}
-    \ifthenelse{\currentpage < \maxpage \AND \currentpage > \minpage}
-    {
-        \IfSubStr{#3}{.jpg}{
+{% 
+    \pgfmathtruncatemacro{\currentpage}{\value{page}}%
+    \pgfmathtruncatemacro{\maxpage}{#1+#2}%
+    \pgfmathtruncatemacro{\minpage}{#1-1}%
+    \pgfmathsetmacro{\nodename}{\value{page}}%
+    \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.25\paperwidth}%
+    \pgfmathsetmacro{\additionalyshift}{1.25in}%
+    \ifthenelse{\currentpage < \maxpage \AND \currentpage > \minpage}%
+    {%
+        \IfSubStr{#3}{.jpg}{%
             \begin{tikzpicture}[overlay,remember picture,y=-0.80pt, x=0.80pt]
               \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
                  ($(current page.north)+(\additionalxshift, \additionalyshift)$)%
                  {\includegraphics[height=\paperheight]{#3}};
             \end{tikzpicture}
-        }{
-          \begin{tikzpicture}[overlay,remember picture,
-                      shift={(0,0)}]
-              #3
+        }{%
+          \begin{tikzpicture}[overlay,remember picture,y=-0.80pt, x=0.80pt, ampersand replacement=\&]
+            \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
+               ($(current page.north)+(\additionalxshift, \additionalyshift)$)%
+               {#3};
           \end{tikzpicture}
          }
     }{}
@@ -527,6 +529,219 @@ status open
 globalcolor{newblack}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+multipagetikzbackground{2}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+something here
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newpage clearpage
 \end_inset
 
 
