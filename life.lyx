@@ -26,6 +26,7 @@
 \setulmarginsandblock{1.5in}{1in}{*} % Top/bottom margins
 \setheadfoot{0.25in}{0.5in} % Header/footer height
 \setheaderspaces{10pt}{*}{*} % Extra header space
+\checkandfixthelayout
 
 %----------------------------------------------------------------------------------------
 %	FOOTNOTE CUSTOMIZATION
@@ -43,8 +44,9 @@
 
 \makepagestyle{mio} % Define a new custom page style
 \setlength{\headwidth}{\textwidth} % Header the same width as the text
-\makeheadrule{mio}{\textwidth}{0.1mm} % Header rule height
-\makeoddhead{mio}{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
+\makeheadrule{mio}{\textwidth}{0.0mm} % Header rule height
+\makeoddhead{mio}{\hfill\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
+\makeevenhead{mio}{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
 \makeoddfoot{mio}{}{\scriptsize {\thepage \quad \vrule \quad \thelastpage}}{} % Footer specification
 \makeoddfoot{plain}{}{\footnotesize {\thepage \quad \vrule \quad \thelastpage}}{} % Pages of chapters
 \pagestyle{mio} % Set the page style to the custom style defined above
@@ -504,6 +506,11 @@ globalcolor{newblack}
 
 \begin_layout Standard
 \noindent
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\noindent
 \begin_inset ERT
 status open
 
@@ -518,7 +525,7 @@ multipagebackgroundtable{2}{
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="14">
+<lyxtabular version="3" rows="7" columns="14">
 <features rotate="0" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -539,7 +546,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -556,7 +562,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -573,7 +578,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -590,7 +594,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -607,7 +610,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -624,7 +626,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -641,7 +642,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -658,7 +658,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -675,7 +674,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -692,7 +690,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -709,7 +706,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -726,7 +722,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -743,7 +738,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -760,7 +754,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -779,7 +772,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -796,7 +788,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -813,7 +804,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -830,7 +820,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -847,7 +836,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -864,7 +852,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -881,7 +868,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -898,7 +884,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -915,7 +900,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -932,7 +916,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -949,7 +932,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -966,7 +948,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -983,7 +964,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1000,7 +980,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1019,7 +998,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1036,7 +1014,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1053,7 +1030,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1070,7 +1046,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1087,7 +1062,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1104,7 +1078,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1121,7 +1094,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1138,7 +1110,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1155,7 +1126,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1172,7 +1142,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1189,7 +1158,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1206,7 +1174,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1223,7 +1190,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1240,7 +1206,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1259,7 +1224,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1276,7 +1240,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1293,7 +1256,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1310,7 +1272,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1327,7 +1288,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1344,7 +1304,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1361,7 +1320,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1378,7 +1336,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1395,7 +1352,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1412,7 +1368,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1429,7 +1384,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1446,7 +1400,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1463,7 +1416,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1480,7 +1432,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1499,7 +1450,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1516,7 +1466,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1533,7 +1482,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1550,7 +1498,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1567,7 +1514,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1584,7 +1530,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1601,7 +1546,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1618,7 +1562,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1635,7 +1578,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1652,7 +1594,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1669,7 +1610,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1686,7 +1626,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1703,7 +1642,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1720,7 +1658,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1739,7 +1676,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1756,7 +1692,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1773,7 +1708,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1790,7 +1724,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1807,7 +1740,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1824,7 +1756,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1841,7 +1772,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1858,7 +1788,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1875,7 +1804,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1892,7 +1820,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1909,7 +1836,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1926,7 +1852,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1943,7 +1868,6 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
-
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1960,7 +1884,232 @@ multipagebackgroundtable{2}{
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
 
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 1
+	width 12.5page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename img/running_feet/1.jpg
 	lyxscale 1
@@ -1992,8 +2141,437 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-something here
+\noindent
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2004,7 +2582,428 @@ something here
 \end_layout
 
 \begin_layout Standard
-\begin_inset space ~
+\noindent
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/running_feet/1.jpg
+	lyxscale 2
+	height 18theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
 

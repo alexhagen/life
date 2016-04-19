@@ -13,6 +13,8 @@
 \RequirePackage[scale=1,angle=0,opacity=1.0,color=white]{background}
 \RequirePackage{tikz}
 \RequirePackage{xifthen}
+\RequirePackage{graphicx}
+\RequirePackage{layout}
 
 \usetikzlibrary{calc}
 \newlength{\fullheight}
@@ -20,17 +22,20 @@
 \newlength{\fullwidth}
 \setlength{\fullwidth}{16.75in}
 
+\newcommand*{\TopLeftX}{2.0\paperwidth-2.0\textwidth+0.5in}%
+\newcommand*{\TopLeftY}{-0.5in-\voffset-\topmargin-\headheight-\headsep}%
+
 \newcommand{\multipagetikz}[3]% start page, num pages, picture code
 {%
     \pgfmathtruncatemacro{\currentpage}{\value{page}}%
     \pgfmathtruncatemacro{\maxpage}{#1+#2}%
     \pgfmathtruncatemacro{\minpage}{#1-1}%
     \pgfmathsetmacro{\nodename}{\value{page}}%
-    \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.25\paperwidth}%
-    \pgfmathsetmacro{\additionalyshift}{1.25in}%
+    \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.00\paperwidth}%
+    \pgfmathsetmacro{\additionalyshift}{0pt}%1.25in}%
     \ifthenelse{\currentpage < \maxpage \AND \currentpage > \minpage}%
     {%
-          \begin{tikzpicture}[overlay,remember picture,y=-0.80pt, x=0.80pt]
+          \begin{tikzpicture}[overlay,remember picture,y=1.00pt, x=1.00pt]
             #3
           \end{tikzpicture}
     }{}
@@ -41,7 +46,8 @@
   \pgfmathtruncatemacro{\startpage}{\value{page}}
   \def\tikzcode{
     \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
-       ($(current page.north)+(\additionalxshift, \additionalyshift)$) %
+       ($(current page.north west) + (\TopLeftX, \TopLeftY) + %
+       (\additionalxshift, \additionalyshift)$) %
        {\includegraphics[height=\paperheight]{#2}};
   }
   \backgroundsetup{
@@ -55,13 +61,18 @@
 {
   \newsavebox{\tablebg}
   \pgfmathtruncatemacro{\startpage}{\value{page}}
-  \sbox{\tablebg}{
-        #2
+  \savebox{\tablebg}{
+        {
+            \setlength\tabcolsep{0pt}
+            \renewcommand{\arraystretch}{0}
+            #2
+        }
   }
   \def\tikzcode{
     \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
-       ($(current page.north)+(\additionalxshift, \additionalyshift)$) %
-       {\usebox{\tablebg}};
+    ($(current page.north west) + (\TopLeftX, \TopLeftY) + %
+    (\additionalxshift, \additionalyshift)$) %
+       {\resizebox{\fullwidth}{!}{\usebox{\tablebg}}};
   }
   \backgroundsetup{
     contents =  {
