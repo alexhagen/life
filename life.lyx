@@ -45,9 +45,10 @@
 \makepagestyle{mio} % Define a new custom page style
 \setlength{\headwidth}{\textwidth} % Header the same width as the text
 \makeheadrule{mio}{\textwidth}{0.0mm} % Header rule height
-\makeoddhead{mio}{\hfill\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
-\makeevenhead{mio}{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
-\makeoddfoot{mio}{}{\scriptsize {\thepage \quad \vrule \quad \thelastpage}}{} % Footer specification
+%\makeoddhead{mio}{\hfill\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
+%\makeevenhead{mio}{\theauthor\hskip.2cm\vrule\hskip.2cm\itshape{\thetitle}}{}{} % Header specification
+\makeoddfoot{mio}{}{}{\scriptsize {\theauthor \quad - \quad \itshape{\thetitle}\quad \quad \thepage \quad \vrule \quad \thelastpage}} % Footer specification
+\makeevenfoot{mio}{\scriptsize {\thepage \quad \vrule \quad \thelastpage}}{}{} % Footer specification
 \makeoddfoot{plain}{}{\footnotesize {\thepage \quad \vrule \quad \thelastpage}}{} % Pages of chapters
 \pagestyle{mio} % Set the page style to the custom style defined above
 
@@ -250,7 +251,7 @@
 \makeatother
 \usepackage{xcolor}
 \definecolor{newblack}{HTML}{142735}
-\definecolor{newwhite}{HTML}{142735}
+\definecolor{newwhite}{HTML}{F9F9F9}
 \definecolor{blue}{HTML}{285668}
 \definecolor{accent}{HTML}{FC8D82}
 \definecolor{link}{HTML}{919789}
@@ -466,8 +467,7 @@ The hike was wonderful, as expected.
 The cold proved to be too much for us; our plans to sleep with the back
  hatch of the car open were discarded when it started snowing at 11pm.
  We woke up early, even before first light, and decided it was time to head
- home, so we could enjoy a breakfast of pancakes in the comfort of our own
- home.
+ home, so we could enjoy a breakfast of pancakes in the comfort of our apartment.
 \end_layout
 
 \end_inset
@@ -499,18 +499,19 @@ status open
 globalcolor{newblack}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\noindent
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\noindent
 \begin_inset ERT
 status open
 
@@ -518,1618 +519,1007 @@ status open
 
 
 \backslash
-multipagebackgroundtable{2}{
+spreadtikz{
 \end_layout
 
-\end_inset
-
-
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="14">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+tikzstyle{block} = [rectangle, inner sep=0pt, outer sep=0pt, anchor=north
+ west, text=newblack]
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+h}{1.65in}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+w}{3.0*
+\backslash
+h/4.0}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+delx}{(16.75in - (12.0*
+\backslash
+w))/14.0}
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+dely}{(10.875in - (6.0*
+\backslash
+h))/8.0}
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+swcornerw}{
+\backslash
+delx*4.0 + 
+\backslash
+w*4.0}
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+swcornerh}{
+\backslash
+h + 
+\backslash
+dely}
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+nwcornerw}{
+\backslash
+delx*1.0 + 
+\backslash
+w*2.0}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+nwcornerh}{
+\backslash
+h}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+necornerw}{
+\backslash
+delx*6.0 + 
+\backslash
+w*4.0}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+necornerh}{2.0*
+\backslash
+h + 2.0*
+\backslash
+dely}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[rectangle, inner sep=0pt, outer sep=0pt, minimum width=16.75in, minimum
+ height=10.875in] (border) at (0,0) {};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, minimum height=
+\backslash
+nwcornerh, minimum width=
+\backslash
+nwcornerw, text width=
+\backslash
+nwcornerw] (text) at ($(border.north west) + (
+\backslash
+delx,-
+\backslash
+dely)$) {%
 \end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
-
-
+  
+\backslash
+begin{minipage}{
+\backslash
+nwcornerw}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
-
+    
+\backslash
+section*{April 15th, 2016}%
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
-
-
+   This week was a slow week, so here's a project I've been working on for
+ a while.
+  I took pictures of my shoes every time I ran for (almost) a year.
+  It provides a cool juxtaposition of places and weather (and injuries and
+ shoes).
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
-
-
+  
+\backslash
+end{minipage}
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
-
+};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of text] (node1) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/1.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node1] (node2) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/2.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node2] (node3) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/3.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node3] (node4) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/4.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node4] (node5) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/5.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node5] (node6) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/6.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, above right=
+\backslash
+dely and 
+\backslash
+delx of node6.north east, anchor=north west] (necorner) {
+\backslash
+adjustbox{width=
+\backslash
+necornerw, height=
+\backslash
+necornerh}{
+\backslash
+input{img/plot_04_15_16.pgf}}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
-
 
+% Row 2
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, below=
+\backslash
+dely of text.south west, anchor=north west] (node7) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/8.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node7] (node8) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/7.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node8] (node9) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/9.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node9] (node10) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/10.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node10] (node11) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/11.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node11] (node12) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/12.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node12] (node13) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/13.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node13] (node14) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/14.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
-
+% Row 3
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, below=
+\backslash
+dely of node7.south west, anchor=north west] (node15) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/15.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node15] (node16) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/16.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node16] (node17) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/17.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node17] (node18) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/18.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node18] (node19) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/19.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node19] (node20) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/20.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node20] (node21) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/21.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node21] (node22) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/22.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node22] (node23) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/23.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node23] (node24) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/24.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node24] (node25) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/25.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node25] (node26) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/26.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
-
+% Row 4
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, below=
+\backslash
+dely of node15.south west, anchor=north west] (node27) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/27.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node27] (node28) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/28.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node28] (node29) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/29.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node29] (node30) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/30.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node30] (node31) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/31.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node31] (node32) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/32.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node32] (node33) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/33.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node33] (node34) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/34.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node34] (node35) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/35.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node35] (node36) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/36.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node36] (node37) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/37.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node37] (node38) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/38.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
-
+% Row 5
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, below=
+\backslash
+dely of node27.south west, anchor=north west] (node39) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/39.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node39] (node40) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/40.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node40] (node41) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/41.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node41] (node42) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/42.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node42] (node43) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/43.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node43] (node44) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/44.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node44] (node45) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/45.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node45] (node46) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/46.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node46] (node47) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/47.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node47] (node48) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/48.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node48] (node49) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/49.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node49] (node50) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/50.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
-
+% Row 6
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, below=
+\backslash
+dely of node42.south east, anchor=north east] (swcorner) {
+\backslash
+includegraphics[width=
+\backslash
+swcornerw]{img/prophetstown_panorama_03_16.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of swcorner.north east, anchor=north west] (node51) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/51.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node51] (node52) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/52.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node52] (node53) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/53.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
-
-\end_inset
 
 
+\backslash
+node[block, right=
+\backslash
+delx of node53] (node54) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/54.jpg}};
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node54] (node55) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/55.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node55] (node56) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/56.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node56] (node57) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/57.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 1
-	width 12.5page%
 
-\end_inset
 
-
+\backslash
+node[block, right=
+\backslash
+delx of node57] (node58) {
+\backslash
+includegraphics[height=
+\backslash
+h]{img/running_feet/58.jpg}};
 \end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
@@ -2141,434 +1531,8 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-\noindent
-\align right
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
+\begin_inset space \space{}
 \end_inset
 
 
@@ -2579,434 +1543,31 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \noindent
 \align left
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/running_feet/1.jpg
-	lyxscale 2
-	height 18theight%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
 \begin_inset Newpage clearpage
 \end_inset
 

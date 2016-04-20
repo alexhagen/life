@@ -17,12 +17,13 @@
 \RequirePackage{layout}
 
 \usetikzlibrary{calc}
+\usetikzlibrary{positioning}
 \newlength{\fullheight}
 \setlength{\fullheight}{10.875in}
 \newlength{\fullwidth}
 \setlength{\fullwidth}{16.75in}
 
-\newcommand*{\TopLeftX}{2.0\paperwidth-2.0\textwidth+0.5in}%
+\newcommand*{\TopLeftX}{2.0\paperwidth-2.0\textwidth+0.75in}%
 \newcommand*{\TopLeftY}{-0.5in-\voffset-\topmargin-\headheight-\headsep}%
 
 \newcommand{\multipagetikz}[3]% start page, num pages, picture code
@@ -34,21 +35,38 @@
     \pgfmathsetmacro{\additionalxshift}{-(\value{page}-#1)*1.00\paperwidth}%
     \pgfmathsetmacro{\additionalyshift}{0pt}%1.25in}%
     \ifthenelse{\currentpage < \maxpage \AND \currentpage > \minpage}%
-    {%
-          \begin{tikzpicture}[overlay,remember picture,y=1.00pt, x=1.00pt]
-            #3
-          \end{tikzpicture}
-    }{}
+    {#3}{}
+}
+
+
+\newcommand{\spreadtikz}[1]%picture code
+{
+  \pgfmathtruncatemacro{\startpage}{\value{page}}
+  \def\tikzcode{
+      \begin{tikzpicture}[overlay,remember picture,y=1.00pt, x=1.00pt,%
+                          shift={($(current page.north west) + %
+                                 (\TopLeftX, \TopLeftY) + %
+                                 (\additionalxshift, \additionalyshift)$)}]
+        #1
+      \end{tikzpicture}
+  }
+  \backgroundsetup{
+    contents =  {
+      \multipagetikz{\startpage}{2}{\tikzcode}
+    }
+  }
 }
 
 \newcommand{\multipagebackgroundimage}[2]% num pages, picture code
 {
   \pgfmathtruncatemacro{\startpage}{\value{page}}
   \def\tikzcode{
+  \begin{tikzpicture}[overlay,remember picture,y=1.00pt, x=1.00pt]
     \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
        ($(current page.north west) + (\TopLeftX, \TopLeftY) + %
        (\additionalxshift, \additionalyshift)$) %
        {\includegraphics[height=\paperheight]{#2}};
+  \end{tikzpicture}
   }
   \backgroundsetup{
     contents =  {
@@ -69,10 +87,12 @@
         }
   }
   \def\tikzcode{
+  \begin{tikzpicture}[overlay,remember picture,y=1.00pt, x=1.00pt]
     \node[inner sep=0pt,outer sep=0pt] (\nodename) at %
     ($(current page.north west) + (\TopLeftX, \TopLeftY) + %
     (\additionalxshift, \additionalyshift)$) %
        {\resizebox{\fullwidth}{!}{\usebox{\tablebg}}};
+  \end{tikzpicture}
   }
   \backgroundsetup{
     contents =  {
