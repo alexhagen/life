@@ -7,7 +7,7 @@
 %% in directory macros/latex/base/lppl.txt.
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{bg}
+\ProvidesPackage{ah_bg}
   [2016/04/18 v0.01 LaTeX package for magazine spreads]
 
 \RequirePackage[scale=1,angle=0,opacity=1.0,color=white]{background}
@@ -99,6 +99,24 @@
       \multipagetikz{\startpage}{#1}{\tikzcode}
     }
   }
+}
+
+
+\newcommand{\fullwidthimage}[1]% num pages, picture code
+{
+  \pgfmathsetmacro{\nodename}{\value{page}}%
+  \newlength{\xshift}
+  \checkoddpage
+  \ifoddpage
+    \setlength{\xshift}{0pt}%0.5\paperwidth - 0.5\textwidth - 0.5\oddsidemargin - 0.5in}%
+  \else
+    \setlength{\xshift}{\evensidemargin}%
+  \fi
+  \hspace*{-\xshift}
+  \makebox[\textwidth][c]{
+    \includegraphics[width=\paperwidth]{#1}  
+  }
+  \let\xshift\relax
 }
 
 \endinput
