@@ -1615,7 +1615,7 @@ fullwidthimage{img/celery_bog_04_20_16.jpg}
 \end_layout
 
 \begin_layout Section*
-April 20th, 2016
+April 22nd, 2016
 \end_layout
 
 \begin_layout Standard
@@ -1633,15 +1633,20 @@ status open
 \end_inset
 
 
-\begin_inset ERT
-status open
+\end_layout
 
 \begin_layout Plain Layout
-
-
-\backslash
-lipsum[1-3]
+This week, the weather broke.
+ That allowed Justine and I to do all of the fun things we've been waiting
+ on doing, including a visit to the Celery Bog and a trip to the farmer's
+ market.
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/celery_bog_justine_04_20_16.JPG
+	lyxscale 10
+	width 90col%
 
 \end_inset
 
