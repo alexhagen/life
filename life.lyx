@@ -1568,24 +1568,16 @@ thispagestyle{empty}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+globalcolor{newblack}
 \end_layout
 
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -0.75in*
 \end_inset
 
 
@@ -1599,7 +1591,159 @@ status open
 
 
 \backslash
-fullwidthimage{img/celery_bog_04_20_16.jpg}
+spreadtikz{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{block} = [rectangle, inner sep=0pt, outer sep=0pt, anchor=north
+ west, text=newblack]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+margin}{1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+bigw}{1.618*(16.75in - 
+\backslash
+margin)/2.618}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+littlew}{1.0*(16.75in - 
+\backslash
+margin)/2.618 + 1em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfmathsetlengthmacro{
+\backslash
+topmargin}{1.0*(10.875in - (3.0 * 
+\backslash
+bigw/4.0))/2.618}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[rectangle, inner sep=0pt, outer sep=0pt, minimum width=16.75in, minimum
+ height=10.875in] (border) at (0,0) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[block, anchor=north east] (big) at ($(border.north east) + (0in,-
+\backslash
+topmargin)$) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+bigw]{img/celery_bog_justine_04_20_16.JPG}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[block, anchor=south east] (little) at ($(big.south west) + (-
+\backslash
+margin,0)$) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+littlew]{img/dog_n_suds_04_18_16.JPG}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[block, anchor=north west, text width=20em] (text) at ($(border.north
+ west) + (1in, -
+\backslash
+topmargin)$) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{minipage}{30em}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+section*{April 22nd, 2016}%
+\end_layout
+
+\begin_layout Plain Layout
+
+   I've always wanted to do something to better remember the first week
+ of spring, and this week typified that feeling.
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
@@ -1608,57 +1752,29 @@ fullwidthimage{img/celery_bog_04_20_16.jpg}
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 0.75in*
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section*
-April 22nd, 2016
-\end_layout
-
-\begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
-
-\begin_layout Plain Layout
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-This week, the weather broke.
- That allowed Justine and I to do all of the fun things we've been waiting
- on doing, including a visit to the Celery Bog and a trip to the farmer's
- market.
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/celery_bog_justine_04_20_16.JPG
-	lyxscale 10
-	width 90col%
-
-\end_inset
-
-
-\end_layout
-
+\begin_inset space \space{}
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
 \begin_inset Newpage clearpage
 \end_inset
 
