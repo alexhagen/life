@@ -1,6 +1,9 @@
 ## OSX Stuff
 .DS_Store
 
+## Python Stuff
+*.pkl
+
 ## LyX stuff
 *.lyx~
 *.lyx#
